@@ -19,8 +19,5 @@
     "react-router-dom": "5.0.1",
     "styled-components": "4.3.2"
   },
-  "devDependencies": {
-    "parcel-bundler": "1.9.7"
-  },
   "keywords": []
 }
