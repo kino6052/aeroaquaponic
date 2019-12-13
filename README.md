@@ -1,2 +1,0 @@
-# aeroaquaponic
-Created with CodeSandbox

@@ -1,0 +1,26 @@
+{
+  "name": "aeroaquaponic-alpha",
+  "version": "1.0.0",
+  "description": "React, TypeScript, parcel",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@types/material-ui": "0.21.7",
+    "@types/react": "16.4.6",
+    "@types/react-dom": "16.0.6",
+    "@types/styled-components": "4.1.18",
+    "material-ui": "0.20.2",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
+    "react-router": "5.0.1",
+    "react-router-dom": "5.0.1",
+    "styled-components": "4.3.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "1.9.7"
+  },
+  "keywords": []
+}
