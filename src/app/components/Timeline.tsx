@@ -29,6 +29,23 @@ const TimelineContainerWrapper = styled.div`
       margin: 1vw 0;
     }
   }
+  @media screen and (max-width: 414px) {
+    & .timeline-container {
+      margin-top: 5vw;
+      width: 58.59vw;
+      & .timeline-stick {
+        width: 0.96vw;
+        height: 135vw;
+        border-radius: 100vw;
+        left: 13.2vw;
+      }
+      & .timeline-item-container {
+        position: absolute;
+        left: 12vw;
+        margin: 2vw 0;
+      }
+    }
+  }
 `
 
 const TimelineItemWrapper = styled.div`
@@ -38,6 +55,9 @@ const TimelineItemWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0vw 0;
+  &:nth-child(2) {
+    display: none;
+  }
   & .ti-center {
     width: 1.75vw;
     height: 1.75vw;
@@ -53,6 +73,33 @@ const TimelineItemWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media screen and (max-width: 414px) {
+    width: 70vw;
+    &:nth-child(2) {
+      display: flex;
+    }
+    &:nth-child(3) {
+      display: none;
+    }
+    & .ti-center {
+      width: 3.5vw;
+      height: 3.5vw;
+      border-radius: 100vw;
+    }
+    & .ti-left {
+      display: none;
+    }
+    & .ti-right {
+      width: 75vw;
+      height: 37.5vw;
+      margin: 3vw;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+  }
 `
 
 const TimelineItemContentWrapper = styled.div`
@@ -66,10 +113,26 @@ const TimelineItemContentWrapper = styled.div`
     & h1 {
       font-size: 1.56vw;
       line-height: 1.56vw;
+      white-space: unset;
     }
     & p {
       font-size: 1.18vw;
       line-height: 1.56vw;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    box-shadow: 0px 0px 2vw lightgrey;
+    & .timeline-item-content {
+      margin: 4vw;
+      & h1 {
+        font-size: 4.53vw;
+        line-height: 4.53vw;
+        margin-bottom: 2vw;
+      }
+      & p {
+        font-size: 3.54vw;
+        line-height: 4.68vw;
+      }
     }
   }
 `
@@ -108,6 +171,9 @@ const LinkWrapper = styled.div`
       }
     }
   }
+  @media screen and (max-width: 414px) {
+    display: none;
+  }
 `
 
 const Link = () => (
@@ -132,14 +198,28 @@ export const Timeline = (props: { children?: any; bold?: boolean }) => (
         <TimelineItem right>
           <TimelineItemContentWrapper>
             <div className="timeline-item-content">
-              <h1>Bio-Truck</h1>
+              <h1>Groundwork</h1>
               <Spacer height={1} />
               <p>
-                Our first project. We want to travel around ecovillages to
-                introduce our idea.
+                We will need to gather information about what is out there
+                already in order to find best candidates for collaboration.
               </p>
               <Spacer height={1} />
-              <Link />
+              {/* <Link /> */}
+            </div>
+          </TimelineItemContentWrapper>
+        </TimelineItem>
+        <TimelineItem right>
+          <TimelineItemContentWrapper>
+            <div className="timeline-item-content">
+              <h1>Sufficient Ecovillage</h1>
+              <Spacer height={1} />
+              <p>
+                We will work together on the proof-of-concept of Unit of
+                Self-Sufficiency.
+              </p>
+              <Spacer height={1} />
+              {/* <Link /> */}
             </div>
           </TimelineItemContentWrapper>
         </TimelineItem>
@@ -149,11 +229,11 @@ export const Timeline = (props: { children?: any; bold?: boolean }) => (
               <h1>Sufficient Ecovillage</h1>
               <Spacer height={1} />
               <p>
-                Once we get the feedback from our project, we'll work with the
-                best candidate to achieve the goal.
+                We will work together on the proof-of-concept of Unit of
+                Self-Sufficiency.
               </p>
               <Spacer height={1} />
-              <Link />
+              {/* <Link /> */}
             </div>
           </TimelineItemContentWrapper>
         </TimelineItem>
@@ -164,10 +244,10 @@ export const Timeline = (props: { children?: any; bold?: boolean }) => (
               <Spacer height={1} />
               <p>
                 Once the other two objectives are complete we would like to let
-                you know how to achieve this goal.
+                the world know how to achieve this goal.
               </p>
               <Spacer height={1} />
-              <Link />
+              {/* <Link /> */}
             </div>
           </TimelineItemContentWrapper>
         </TimelineItem>

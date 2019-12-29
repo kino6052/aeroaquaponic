@@ -7,6 +7,16 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-image: url('./images/Diagonals.svg'), url('./images/Grass.png');
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat;
+}
+
+@media screen and (max-width: 414px) {
+  html,
+  body {
+    background-image: url('./images/Mobile.svg'), url('./images/Grass.png');
+  }
 }
 
 @font-face {

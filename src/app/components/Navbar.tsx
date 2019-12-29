@@ -27,6 +27,9 @@ const NavbarWrapper = styled.div`
       }
     }
   }
+  @media screen and (max-width: 414px) {
+    display: none;
+  }
 `
 
 export const Navbar = () => {

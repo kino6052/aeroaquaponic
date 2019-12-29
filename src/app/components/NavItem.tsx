@@ -11,11 +11,15 @@ const NavItemWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.1s;
   ${props =>
     props.bold &&
     css`
       font-weight: 700;
     `}
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export const NavItem = (props: { children?: any; bold?: boolean }) => {

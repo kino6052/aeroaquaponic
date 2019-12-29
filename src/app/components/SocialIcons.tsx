@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { Spacer } from './Spacer'
 
-const SocialIconInstanceWrapper = styled.div<{ image: string }>`
+const SocialIconInstanceWrapper = styled.a<{ image: string }>`
   display: flex;
   flex-direction: column;
   height: 4.1vw;
@@ -19,6 +19,10 @@ const SocialIconInstanceWrapper = styled.div<{ image: string }>`
     css`
       background-image: url(${props.image});
     `}
+  @media screen and (max-width: 414px) {
+    height: 8.2vw;
+    width: 8.2vw;
+  }
 `
 
 export const SocialIcon: React.SFC = (props: { image: string }) => {
@@ -31,16 +35,39 @@ const SocialIconWrapper = styled.div`
   width: 100%;
   align-items: start;
   justify-content: center;
+  @media screen and (max-width: 414px) {
+    margin-top: 10vw;
+  }
 `
 
 export const SocialIconsGroup: React.SFC = props => {
   return (
     <SocialIconWrapper>
-      <SocialIcon image="./images/youtube.png" />
-      <SocialIcon image="./images/facebook.png" />
-      <SocialIcon image="./images/twitter.png" />
-      <SocialIcon image="./images/kickstarter.png" />
-      <SocialIcon image="./images/linkedin.png" />
+      <SocialIcon
+        title="YouTube"
+        href="https://www.youtube.com/channel/UCGes3ATrv3cOwRb39wo2iXQ"
+        image="./images/youtube.png"
+      />
+      <SocialIcon
+        title="Facebook"
+        href="https://www.facebook.com/aeroaquaponics"
+        image="./images/facebook.png"
+      />
+      <SocialIcon
+        title="Twtter"
+        href="https://twitter.com/aeroaquaponic"
+        image="./images/twitter.png"
+      />
+      <SocialIcon
+        title="Instagram"
+        href="https://www.instagram.com/aeroaquaponic/"
+        image="./images/instagram.png"
+      />
+      <SocialIcon
+        title="LinkedIn"
+        href="https://www.linkedin.com/company/aeroaquaponic"
+        image="./images/linkedin.png"
+      />
     </SocialIconWrapper>
   )
 }

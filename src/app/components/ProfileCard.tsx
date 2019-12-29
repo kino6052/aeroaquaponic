@@ -9,11 +9,12 @@ const ProfileCardWrapper = styled.div<{ image: string }>`
   width: 30vw;
   align-items: center;
   justify-content: center;
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   margin: 2vw;
   & .image {
     height: 12.5vw;
     width: 12.5vw;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     border-radius: 50vw;
     background-color: grey;
     background-size: cover;
@@ -29,6 +30,10 @@ const ProfileCardWrapper = styled.div<{ image: string }>`
   }
   & .description {
     text-align: center;
+    width: 20vw;
+  }
+  @media screen and (max-width: 414px) {
+    display: none;
   }
 `
 
@@ -43,7 +48,7 @@ export const ProfileCard: React.SFC<{
       <div className="image" />
       <Spacer height={1.7} />
       <div className="name">{name}</div>
-      <Spacer height={1.7} />
+      <Spacer height={1.0} />
       <div className="description">{description}</div>
     </ProfileCardWrapper>
   )
@@ -63,14 +68,12 @@ export const ProfileCardGroup: React.SFC = props => {
       <ProfileCard
         image="./images/dima.jpg"
         name={'Dmitry Dementyev'}
-        description={`6 years of experience in algal filtration in seawater RAS. 3 years of experience in Aquaponic. Chief researcher in Aquaculture Department in VNIRO. Communicative in English and Spanish.`}
+        description={`Chief Researcher in Aquaculture`}
       />
       <ProfileCard
         image="./images/kirill.jpg"
         name={'Kirill Novik'}
-        description={`Bachelor Degree in Computer Science and Molecular, Cellular and
-Developmental Biology at the University of Colorado at Boulder
-4+ Experience in Software Development (Web).`}
+        description={`Senior Software Engineer`}
       />
     </ProfileCardGroupWrapper>
   )

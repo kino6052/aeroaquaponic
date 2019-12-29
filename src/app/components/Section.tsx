@@ -16,6 +16,7 @@ const SectionWrapper = styled.div`
     height: 75vw;
   }
   & .section-content {
+    /* height: inherit; */
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -65,13 +66,36 @@ const SectionWrapper = styled.div`
       text-align: center;
     }
   }
+
+  @media screen and (max-width: 414px) {
+    height: 180vw;
+    & .section-content {
+      & .title {
+        height: 17vw;
+        & h1 {
+          font-size: 12.5vw;
+          line-height: 12.5vw;
+        }
+        & h2 {
+          font-size: 4.68vw;
+          line-height: 4.68vw;
+        }
+      }
+      & .text {
+        & p {
+          width: 160vw;
+          line-height: 4.5vw;
+          font-size: 3.5vw;
+        }
+        height: 16.21vw;
+      }
+    }
+  }
 `
 
 export const Section: React.SFC<{ SVG?: React.SFC }> = props => {
-  const { SVG } = props
   return (
     <SectionWrapper {...props}>
-      {SVG && <SVG />}
       <div className="section-content">{props.children}</div>
     </SectionWrapper>
   )

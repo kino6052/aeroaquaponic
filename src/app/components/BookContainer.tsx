@@ -34,6 +34,23 @@ const BookContainerWrapper = styled.div`
       transform: scale(1.05);
     }
   }
+  @media screen and (max-width: 414px) {
+    & .book-container {
+      width: 60vw;
+      height: 120vw;
+      margin-top: 20vw;
+      .book {
+        height: 87.6vw;
+        width: 55.05vw;
+        border: 0.6vw solid black;
+      }
+      b {
+        line-height: 9vw;
+        font-size: 5.28vw;
+        margin-top: 3.6vw;
+      }
+    }
+  }
 `
 
 export const BookContainer = (props: { children?: any; bold?: boolean }) => (
@@ -41,16 +58,9 @@ export const BookContainer = (props: { children?: any; bold?: boolean }) => (
     <div className="book-container">
       <Book
         image="./images/vision-cover.png"
-        href="https://www.canva.com/design/DADq1XGg6M8/0aNlIyfMxS4a1HGAoa40uw/view?utm_content=DADq1XGg6M8&utm_campaign=designshare&utm_medium=link&utm_source=postdownload#1"
+        href="./images/Aeroaquaponic%20-%20Unplugging%20from%20Consumerism.pdf"
       />
       <b>Unplugging from Consumerism</b>
-    </div>
-    <div className="book-container">
-      <Book
-        image="./images/tech-cover.png"
-        href="https://www.canva.com/design/DADjg-KVVI0/VPMfbccAc1RfYBKYuHF8VA/view?utm_content=DADjg-KVVI0&utm_campaign=designshare&utm_medium=link&utm_source=postdownload#1"
-      />
-      <b>Self-Sufficient Farming</b>
     </div>
   </BookContainerWrapper>
 )
