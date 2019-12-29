@@ -83,9 +83,9 @@
                     <div id="navbar">
                       <div id="navigation">
                         <div id="nav-right">
-                          <div class="sc-ifAKCX iybelv">Get eBook</div>
-                          <div class="sc-ifAKCX iybelv">Projects</div>
-                          <div class="sc-ifAKCX iybelv">About Us</div>
+                          <div class="sc-ifAKCX iybelv" onclick="scrollToId('#ebook')">Get eBook</div>
+                          <div class="sc-ifAKCX iybelv" onclick="scrollToId('#projects')">Projects</div>
+                          <div class="sc-ifAKCX iybelv" onclick="scrollToId('#about-us')">About Us</div>
                         </div>
                       </div>
                     </div>
@@ -96,7 +96,7 @@
                   <h2>Self-sufficiency and Sustainability</h2>
                   <div height="2.34" class="sc-bdVaJa jxAuQg"></div>
                   <div id="headline-buttons">
-                    <div color="primary" class="sc-bwzfXH dBzJcq"><button class="button">Get eBook</button></div>
+                    <div color="primary" class="sc-bwzfXH dBzJcq"><button class="button" onclick="scrollToId('#ebook')">Get eBook</button></div>
                   </div>
                 </div>
               </div>
@@ -255,6 +255,12 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-155059977-1');
+    </script>
+    <script>
+      const scrollToId = id => {
+        const y = document.querySelector(id).getBoundingClientRect().top
+        window.scrollTo(0, y)
+      }
     </script>
   </body>
 </html>
