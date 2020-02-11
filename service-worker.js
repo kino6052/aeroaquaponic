@@ -11,7 +11,6 @@ self.addEventListener('install', function(event) {
         '/images/graphic.png',
         '/images/graphic.svg',
         '/images/grass-fb.png',
-        '/images/Grass.png',
         '/images/instagram.png',
         '/images/kickstarter.png',
         '/images/kirill.jpg',
