@@ -257,7 +257,13 @@
         </div>
       </div>
     </main>
+    <script src='./service-worker.js'></script>
     <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
       const scrollToId = id => {
         const y = document.querySelector(id).getBoundingClientRect().top
         window.scrollTo(0, y)
