@@ -2,7 +2,7 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('cache').then(function(cache) {
       return cache.addAll([
-        '/images/Aeroaquaponic - Unplugging from Consumerism.pdf',
+        // '/images/Aeroaquaponic - Unplugging from Consumerism.pdf',
         '/images/Diagonals.svg',
         '/images/dima.jpg',
         '/images/dima.png',
